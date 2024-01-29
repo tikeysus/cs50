@@ -85,4 +85,56 @@ public class CodingBatWarmupOne
     }
     // Should look into a better way for repeating strings.
     // Maybe with looping or the .repeat() method. 
+
+    public String backAround(String str) 
+    {
+        return (str.charAt(str.length() - 1) + str + str.charAt(str.length() - 1));
+    }
+
+    public boolean or35(int n)
+    {
+        return (n % 3 == 0 || n % 5 == 0);
+    }
+
+    public String front22(String str)
+    {
+        if (str.length() <= 2)
+    {
+            return (str + str + str);
+    }
+        return (str.substring(0,2) + str + str.substring(0,2));
+    }
+
+    public boolean startHi(String str)
+    {
+        if (str.length() < 2)
+    {
+            return false;
+    }
+        return (str.substring(0,2).equals("hi"));
+    }
+
+    //We use .equals() method because that compares the contents within
+    //the string instead of just checking whether or not the two 
+    //strings refer to the same object in memory using the 
+    //comparison '=='. 
+
+    public boolean icyHot(int temp1, int temp2) 
+    {
+        return ((temp1 < 0 && temp2 > 100)
+                || (temp1 > 100 && temp2 < 0));
+    }
+
+    public boolean in1020(int a, int b) 
+    {
+        return (a >= 10 && a <= 20 || b >= 10 && b <= 20); 
+    }
+
+    public boolean hasTeen(int a, int b, int c) 
+    {
+        return (a >= 13 && a <= 19 || b >= 13 && b <=19 || 
+                c >= 13 && c <= 19);  
+    }
+
+
 }
