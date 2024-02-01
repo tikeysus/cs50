@@ -106,4 +106,18 @@ class StringTwo
     return false; 
     }
     //If you thought the last one was ugly, wait till you see this. 
+
+        public boolean bobThere(String str)
+    {
+    int i = 0;
+    for (;i < str.length() - 2; i ++) 
+    {
+        if (str.charAt(i) == 'b' && str.charAt(i + 2) == 'b')
+        {
+            return true;
+        }
+    }
+    return false; 
+}
+
 }
