@@ -118,6 +118,7 @@ class StringTwo
         }
     }
     return false; 
+    }
 
     public String mixString(String a, String b)
     { 
@@ -143,5 +144,41 @@ class StringTwo
     }
     return str;
     }
+
+    public String repeatFront(String str, int n) 
+    {
+    String empty = "";
+    int i = n;
+    for (; i > 0; i --)
+    {
+        empty += str.substring(0, i);
+    }
+    return empty; 
+    }
+
+    public String repeatSeparator(String word, String sep, int count)
+    {
+    String empty = "";
+    int i = 0;
+    for (; i < count; i ++)
+    {
+        empty += word + sep;
+    }
+    return empty.substring(0, empty.length() - sep.length());
+    }
+
+    public String repeatEnd(String str, int n) 
+    {
+    String empty = "";
+    int i = 0;
+    for (; i < n; i ++)
+    {
+        empty += str.substring(str.length() - n, str.length());
+    }
+    return empty;
+    }
+
+
+
 
 }
