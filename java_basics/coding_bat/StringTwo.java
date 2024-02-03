@@ -107,7 +107,7 @@ class StringTwo
     }
     //If you thought the last one was ugly, wait till you see this. 
 
-        public boolean bobThere(String str)
+    public boolean bobThere(String str)
     {
     int i = 0;
     for (;i < str.length() - 2; i ++) 
@@ -118,6 +118,30 @@ class StringTwo
         }
     }
     return false; 
-}
+
+    public String mixString(String a, String b)
+    { 
+    String str = "";
+    int i = 0;
+    if (a.length() > b.length())
+    {
+        for (; i < b.length(); i ++)
+        {
+        str += (a.charAt(i));
+        str += (b.charAt(i));
+        }
+        str += a.substring(i, a.length());
+    }
+    else
+    {
+        for (; i < a.length(); i ++)
+        {
+        str += (a.charAt(i));
+        str += (b.charAt(i));
+        }
+    str += (b.substring(i, b.length()));
+    }
+    return str;
+    }
 
 }
