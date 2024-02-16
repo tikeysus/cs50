@@ -2,18 +2,10 @@ class BankAccountTester
 {
     public static void main(String args[]) 
     {
-        BankAccount my_account = new BankAccount(45, 400, "Lukey");
-        System.out.println(my_account.getBalance());
-        my_account.deposit(400);
-        System.out.println(my_account.getBalance());
-        try
-        {
-            my_account.withDraw(1000);
-        }
-        catch (InvalidWithdrawalAmountException e)
-        {
-            System.out.println("Error: " + e.getMessage());
-        }
-        System.out.println(my_account.getBalance());
+        BankAccount tikeysus = new BankAccount(0, 20, "huge");
+        BankAccount lukeysus = new BankAccount(0, 250, "massive");
+        BankAccount.eTransfer(tikeysus, lukeysus, 500);
+        System.out.println(tikeysus.getBalance());
+        System.out.println(lukeysus.getBalance());
     }
 }
