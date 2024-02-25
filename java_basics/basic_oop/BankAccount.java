@@ -17,6 +17,10 @@ public class BankAccount
         this.account_holder = account_holder;
     }
     
+    public void GetFreeReward(){
+        this.balance += 1;
+    }
+        
     public double getBalance()
     {
         return balance;
