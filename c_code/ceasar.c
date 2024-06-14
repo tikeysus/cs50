@@ -1,7 +1,7 @@
 #include <stdio.h> 
 #include <string.h> 
 
-char* caesar(char *plaintext, int key){
+char* caesar(char* plaintext, int key){
 	int index = 0; 
 	while (plaintext[index] != '\0'){
 		plaintext[index] += key; 
@@ -11,7 +11,7 @@ char* caesar(char *plaintext, int key){
 }
 
 int main(void){
-	int key = 2; 
+	int key = 3; 
 	char plain[] = "Hello, World!"; 
 	char *cypher = caesar(plain, key); 
 
