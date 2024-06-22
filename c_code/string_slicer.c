@@ -12,7 +12,7 @@ int main(void){
 	int count = 0; 
 	while (sub[count] != '\0'){
 		printf("%c", sub[count]); 
-		count ++; //will turn this into its own function for better modularity. 
+		count ++;
 	}
 
 	return 0; 
@@ -36,6 +36,7 @@ char* string_slicer(char source[], int start, int end){
 		slice[count] = source[start + count]; 
 		count ++; 
 	}
+	slice[count] = '\0'; //null terminating so it can be used in other functions with expexted behaviour. 
 
 	return slice; 
 
