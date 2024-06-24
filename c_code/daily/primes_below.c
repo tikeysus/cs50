@@ -8,7 +8,7 @@ int prime(int num);
 int summator(int upper_bound); 
 
 int main(void){
-	printf("Please enter a number: \n"); 
+	printf("Please enter a number: "); 
 	int number; 
 
 	scanf("%d", &number);
