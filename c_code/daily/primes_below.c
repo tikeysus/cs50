@@ -8,17 +8,17 @@ int prime(int num);
 int summator(int upper_bound); 
 
 int main(void){
-	printf("Please enter a number: "); 
+	printf("Please enter a number: \n"); 
 	int number; 
 
 	scanf("%d", &number);
 	if (number < 0){
-		printf("Incorrect input"); 
+		printf("Incorrect input\n"); 
 		return 0; 
 	}
 
 	int answer = summator(number); 
-	printf("The answer is: %d", answer); 
+	printf("The answer is: %d\n", answer); 
 
 	return 0; 
 }
@@ -40,20 +40,16 @@ int prime(int num){
 }
 
 int summator(int upper_bound){
-	if (upper_bound == 2){
-		return 2; 
+	if (upper_bound == 1 || upper_bound == 0){
+		return 0; 
 	}
 
-	int sum = 0; 
+	int sum = 2; 
 
-	for (int i = 1; i <= upper_bound; i += 2){
+	for (int i = 3; i <= upper_bound; i += 2){
 		if (prime(i) == 1){
 			sum += i; 
 		}
-	}
-
-	if (upper_bound > 2){
-		return sum += 2; 
 	}
 
 	return sum; 
