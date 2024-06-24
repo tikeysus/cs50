@@ -5,7 +5,7 @@
 // Find the sum of the primes below a number (inclusive). 
 
 int prime(int num); 
-int summator(int upper_bound); 
+long long int summator(int upper_bound); 
 
 int main(void){
 	printf("Please enter a number: "); 
@@ -39,15 +39,16 @@ int prime(int num){
 	return 1; //prime
 }
 
-int summator(int upper_bound){
+long long int summator(int upper_bound){
 	if (upper_bound == 1 || upper_bound == 0){
 		return 0; 
 	}
 
-	int sum = 2; 
+	long long int sum = 2; 
 
 	for (int i = 3; i <= upper_bound; i += 2){
 		if (prime(i) == 1){
+			printf("Adding num %d\n", i);
 			sum += i; 
 		}
 	}
